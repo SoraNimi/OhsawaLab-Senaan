@@ -1,0 +1,348 @@
+
+* ***********************************************************
+* *                     ROHM SPICE MODEL                    *
+* ***********************************************************
+*
+*    PROCESS : BU40N1(0.18um CMOS)
+*    MODEL   : BSIM3v3.2(LEVEL53)
+*    VERSION : 1.0
+*    DATE    : 2003.4.8
+*    SPICE VERSION : HSPICE 98.2
+*    extract WA Lot No.S000233-07
+*
+*     Attention
+*        1)  HDIF depends on the real distance from poly
+*            spacer to contact center.
+*            The value listed here is SPICE TEG value.
+*            You should change it according to your layout.
+*        2)  Please entry AD/AS and PD/PS.If you do not
+*            entry,you can not get correct results.
+*        3)  Please use bu30n1.skw file
+*
+*    These spice models are applied to the DRAWING image.
+*
+*
+
+
+* ---
+* Resistor
+* ---
+*.MODEL R R
+
+*.MODEL RPS R
+
+* ---
+* Capacitor
+* ---
+.MODEL M4 C
+
+
+* ***********************************************************
+* *                        Model Type                       *
+* ***********************************************************
+*
+*            3.3V     NMOS Tr  HN  <- ND
+*            3.3V     PMOS Tr  HP  <- PD
+*            1.8V     NMOS Tr  N2
+*            1.8V     PMOS Tr  P2
+*
+
+****************************************************
+*             1.8V NMOS Model Typical  - 2004.2.16 *
+****************************************************
+******************* 1.8V NMOS1 *************************
+.MODEL N.2 NMOS
++ LMIN = 0.18e-6
++ LMAX = 0.50e-6
++ WMIN = 1.00e-6
++ WMAX = 10.1e-6
++ VERSION = 3.2
++ LEVEL = 53
++ MOBMOD = 3
++ CAPMOD = 3
++ TNOM = 25
++ TOX = toxn
++ XJ = 1.5E-07
++ NCH = 1.7E+17
++ U0 = 276.8
++ VTH0 = 'delvtn + 0.4624 '
++ K1 = 0.4128
++ K2 = -0.0161
++ K3 = 8.095
++ K3B = 5.101
++ W0 = 1E-09
++ NLX = 8.967E-08
++ DVT0 = 4.26
++ DVT1 = 1.248
++ DVT2 = -0.1
++ DVT0W = 1.544E+04
++ DVT1W = 6.973E+07
++ DVT2W = 0
++ LINT = 2.378E-08
++ WINT = 4.612E-09
++ DWG = -3.682E-08
++ DWB = 0
++ UA = -1.473E-09
++ UB = 2.642E-18
++ UC = 0.2385
++ VSAT = 9.217E+04
++ DELTA = 1.444E-15
++ A0 = 1.766
++ B0 = -8.838E-06
++ B1 = 2.43E-05
++ AGS = 0.7566
++ KETA = 0.0159
++ A1 = 0.0005758
++ A2 = 0.6551
++ RDSW = 290.9
++ PRWG = -0.009464
++ PRWB = 0
++ WR = 1.038
++ VOFF = -0.1662
++ NFACTOR = 1.172
++ CDSC = 0.002468
++ CDSCD = -0.0001
++ CDSCB = -0.001006
++ CIT = 0
++ ETA0 = 0.01787
++ ETAB = -0.0619
++ DSUB = 0.7451
++ PCLM = 1.844
++ PDIBLC1 = 0.43
++ PDIBLC2 = 0.0008522
++ PDIBLCB = -4.441E-16
++ DROUT = 0.9994
++ PSCBE1 = 3.792E+07
++ PSCBE2 = 0
++ PVAG = 0.2047
++ ALPHA0 = 3.609E-06
++ BETA0 = 16.53
++ UTE = -2.297
++ KT1 = -0.248
++ KT1L = 1.579E-09
++ KT2 = 4.441E-16
++ UA1 = 1.713E-09
++ UB1 = -3.511E-18
++ UC1 = -0.1888
++ AT = 5.076E+04
++ PRT = 0
+*+ CGSO = 1E-12
+*+ CGSL = 1E-11
+*+ CGDL = 1E-11
+*+ CKAPPA = 0.6
+*+ CGDO = 1E-12
+*+ CGBO = 1E-12
++ DLC = 2.378E-08
++ DWC = 4.612E-09
++ CLC = 1E-07
++ CLE = 0.6
+*+ CF = 0
++ ELM = 5
++ CJ = 0.0009478
++ VOFFCV = 0
++ NOFF = 1
++ CJSW = 2.968E-10
++ PB = 0.7758
++ PBSW = 1
++ MJ = 0.2932
++ MJSW = 0.4036
++ TPB = 2.175E-09
++ TPBSW = 1E-15
++ TPBSWG = 0
++ TCJ = 0.001
++ TCJSW = 1.444E-15
++ TCJSWG = 0
++ XPART = 0
++ JS = 6E-06
++ WL = 8E-16
++ WLN = 1.12
++ WW = -1E-15
++ WWN = 1
++ WWL = 0
++ LL = 0
++ LW = 0
++ LWN = 0
++ LWL = 0
++ LLN = 1
++ LXJ = 0
++ LU0 = 0
++ LVTH0 = 0
++ LK1 = 0
++ LK2 = 0
++ LK3 = 0
++ LK3B = 0
++ LW0 = 0
++ LNLX = 0
++ LDVT0 = 0
++ LDVT1 = 0
++ LDVT2 = 0
++ LDVT0W = 0
++ LDVT1W = 0
++ LDVT2W = 0
++ LUA = 0
++ LUB = 0
++ LUC = 0
++ LVSAT = 0
++ LA0 = 0
++ LKETA = 0
++ LAGS = 0
++ LA1 = 0
++ LA2 = 0
++ LB0 = 0
++ LB1 = 0
++ LRDSW = 0
++ LPRWG = 0
++ LPRWB = 0
++ LWR = 0
++ LVOFF = 0
++ LNFACTOR = 0
++ LCDSC = 0
++ LCDSCB = 0
++ LCDSCD = 0
++ LCIT = 0
++ LETA0 = 0
++ LETAB = 0
++ LDSUB = 0
++ LPCLM = 0
++ LPDIBLC1 = 0
++ LPDIBLC2 = 0
++ LPDIBLCB = 0
++ LDROUT = 0
++ LPSCBE1 = 0
++ LPSCBE2 = 0
++ LPVAG = 0
++ LDWG = 0
++ LDWB = 0
++ LALPHA0 = 0
++ LBETA0 = 0
++ LKT1 = 0
++ LKT1L = 0
++ LKT2 = 0
++ LUTE = 0
++ LAT = 0
++ LPRT = 0
++ LNCH = 0
++ WXJ = 0
++ WU0 = 0
++ WVTH0 = 0
++ WK1 = 0
++ WK2 = 0
++ WK3 = 0
++ WK3B = 0
++ WW0 = 0
++ WNLX = 0
++ WDVT0 = 0
++ WDVT1 = 0
++ WDVT2 = 0
++ WDVT0W = 0
++ WDVT1W = 0
++ WDVT2W = 0
++ WUA = 0
++ WUB = 0
++ WUC = 0
++ WVSAT = 0
++ WA0 = 0
++ WKETA = 0
++ WAGS = 0
++ WA1 = 0
++ WA2 = 0
++ WB0 = 0
++ WB1 = 0
++ WRDSW = 0
++ WPRWG = 0
++ WPRWB = 0
++ WWR = 0
++ WVOFF = 0
++ WNFACTOR = 0
++ WCDSC = 0
++ WCDSCB = 0
++ WCDSCD = 0
++ WCIT = 0
++ WETA0 = 0
++ WETAB = 0
++ WDSUB = 0
++ WPCLM = 0
++ WPDIBLC1 = 0
++ WPDIBLC2 = 0
++ WPDIBLCB = 0
++ WDROUT = 0
++ WPSCBE1 = 0
++ WPSCBE2 = 0
++ WPVAG = 0
++ WDWG = 0
++ WDWB = 0
++ WALPHA0 = 0
++ WBETA0 = 0
++ WKT1 = 0
++ WKT1L = 0
++ WKT2 = 0
++ WUTE = 0
++ WAT = 0
++ WPRT = 0
++ WNCH = 0
++ PXJ = 0
++ PU0 = 0
++ PVTH0 = 0
++ PK1 = 0
++ PK2 = 0
++ PK3 = 0
++ PK3B = 0
++ PW0 = 0
++ PNLX = 0
++ PDVT0 = 0
++ PDVT1 = 0
++ PDVT2 = 0
++ PDVT0W = 0
++ PDVT1W = 0
++ PDVT2W = 0
++ PUA = 0
++ PUB = 0
++ PUC = 0
++ PVSAT = 0
++ PA0 = 0
++ PKETA = 0
++ PAGS = 0
++ PA1 = 0
++ PA2 = 0
++ PB0 = 0
++ PB1 = 0
++ PRDSW = 0
++ PPRWG = 0
++ PPRWB = 0
++ PWR = 0
++ PVOFF = 0
++ PNFACTOR = 0
++ PCDSC = 0
++ PCDSCB = 0
++ PCDSCD = 0
++ PCIT = 0
++ PETA0 = 0
++ PETAB = 0
++ PDSUB = 0
++ PPCLM = 0
++ PPDIBLC1 = 0
++ PPDIBLC2 = 0
++ PPDIBLCB = 0
++ PDROUT = 0
++ PPSCBE1 = 0
++ PPSCBE2 = 0
++ PPVAG = 0
++ PDWG = 0
++ PDWB = 0
++ PALPHA0 = 0
++ PBETA0 = 0
++ PKT1 = 0
++ PKT1L = 0
++ PKT2 = 0
++ PUTE = 0
++ PAT = 0
++ PPRT = 0
++ PNCH = 0
++ BINUNIT = 1
++ ACM = 2
++ RSH = rshn
++ XL = xln
++ XW = xwn
++ LDIF = 0
++ HDIF = 6.4e-7
++ CF = '1.0E-8*3.4531438e-11/toxn'

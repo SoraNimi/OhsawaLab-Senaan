@@ -1,0 +1,4 @@
+$DATA1 SOURCE='FineSimPro' VERSION='L-2016.06-SP2-2'
+.TITLE ''
+        avgval0        avgval1        avgval2        avgval3        avgval4        avgval5        avgval6        avgval7        avgval8        avgval9            bld          bldin          czabd         temper         alter#
+     6.0894e-01     5.8969e-01     5.9195e-01     6.9071e-01     6.0848e-01     6.0302e-01     6.0661e-01     6.1957e-01     6.1928e-01     5.8737e-01     6.5757e-01          error          error     2.5000e+01     1.0000e+00
